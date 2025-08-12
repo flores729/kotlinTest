@@ -43,4 +43,23 @@ fun main(args: Array<String>) {
     else{
         print("not contain")
     }
+    for (i in arrayOf(100, 200, 103, 201, 1000, 1902)){
+        println("$i ==================================")
+        when(i) {
+            100 -> println("1. price = $i")
+            200 -> println("2. price = $i")
+            1000 -> println("3. price = $i")
+            else -> println("error")
+        }
+        println("============== Discrete ====================")
+        when(i) {
+            in 100..109 -> println("1. price = $i")
+            in 200..299 -> println("2. price = $i")
+            in 1000..2000 -> println("3. price = $i")
+            else -> println("error")
+        }
+        println("=============== Range =====================")
+        println("\n\n\n\n")
+
+    }
 }
