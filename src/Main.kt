@@ -1,3 +1,20 @@
+class Item(
+    val name: String,
+    val price: Int
+): ItemTrade{
+    override fun buy(){
+        println("buy $name")
+    }
+    override fun sell(){
+        println("sell $name")
+    }
+}
+
+interface ItemTrade{
+    fun buy()
+    fun sell()
+}
+
 fun main(args: Array<String>) {
     println("hello world!")
     var a = 10;
@@ -62,4 +79,16 @@ fun main(args: Array<String>) {
         println("\n\n\n\n")
 
     }
+
+    //fun sum(price1: Int, price2: Int): Int {
+    //    return price1 + price2
+    //}
+
+    fun sum(price1: Int, price2: Int): Int = price1 + price2
+    println(sum(100, 20));
+
+
+    val item = Item(name = "book", price = 10000)
+    println(item.name)
+    item.buy()
 }
